@@ -23,6 +23,19 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ]
 
-print(products)
+print("--------------")
+print("THERE ARE", (len(products)), "PRODUCTS:")
+
+for product in products:
+    print(product["name"])
+
+
+print("--------------")
+print("THERE ARE", (len(department)), "DEPARTMENTS:")
+
+for department in products:
+    print(department["department"]
+
+# print(products)
 
 # code.interact(local=locals())
