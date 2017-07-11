@@ -30,13 +30,18 @@ print("THERE ARE", (len(products)), "PRODUCTS:")
 products = sorted(products, key=operator.itemgetter("name"))
 
 for product in products:
-    print(" + " + product["name"])
+    price_usd = ' (${0:.2f})'.format(product["price"])
+    print(" + " + product["name"] + price_usd)
+
+#for product in products:
+#    price_usd = ' (${0:.2f})'.format(product["price"])
+#    print(" + " + product["name"] + price_usd)    
 
 
 
 print(" ")
 print("--------------")
-# print("THERE ARE", (len(department)), "DEPARTMENTS:")
+# print("THERE ARE", (len(department)), "   DEPARTMENTS:")
 
 #for department in products:
 #    print(product["department"]
