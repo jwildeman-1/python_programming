@@ -27,14 +27,16 @@ print("--------------")
 print("THERE ARE", (len(products)), "PRODUCTS:")
 
 for product in products:
-    print(product["name"])
+    print(" + " + product["name"])
 
 
+
+print(" ")
 print("--------------")
-print("THERE ARE", (len(department)), "DEPARTMENTS:")
+# print("THERE ARE", (len(department)), "DEPARTMENTS:")
 
-for department in products:
-    print(department["department"]
+#for department in products:
+#    print(product["department"]
 
 # print(products)
 
