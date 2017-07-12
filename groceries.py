@@ -48,15 +48,13 @@ for product in products:
 
 departments = set(departments)
 departments = list(departments)
+departments = sorted(departments)
 
-print(" ")
 print("--------------")
 print("THERE ARE", (len(departments)), "DEPARTMENTS:")
 
-departments = sorted(products, key=operator.itemgetter("department"))
-
-#for department in departments:
-#    print(" + " + (departments["department"]))
+for department_name in departments:
+    print(" + " + department_name.title())
 
 #print(departments)
 
