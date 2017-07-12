@@ -46,20 +46,20 @@ departments = []
 for product in products:
     departments.append(product["department"])
 
-departments = set(departments)
-departments = list(departments)
-departments = sorted(departments)
+unique_departments = set(departments)
+unique_departments = list(unique_departments)
+unique_departments = sorted(unique_departments)
 
 print("--------------")
-print("THERE ARE", (len(departments)), "DEPARTMENTS:")
+print("THERE ARE", (len(unique_departments)), "DEPARTMENTS:")
 
-for department_name in departments:
-    print(" + " + department_name.title())
+for department_name in unique_departments:
+    count_of_products = departments.count(department_name)
+    print(" + " + department_name.title() + " (" + str(count_of_products) + " products)")
+
+
 
 #print(departments)
-
-
-# print("THERE ARE", (len(department)), "   DEPARTMENTS:")
 
 # print(products)
 
