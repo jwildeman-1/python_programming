@@ -28,14 +28,14 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ]
 
-#print("--------------")
-#print("THERE ARE", (len(products)), "PRODUCTS:")
+print("--------------")
+print("THERE ARE", (len(products)), "PRODUCTS:")
 
 products = sorted(products, key=operator.itemgetter("name"))
 
-#for product in products:
-#    price_usd = ' (${0:.2f})'.format(product["price"])
-#    print(" + " + product["name"] + price_usd)
+for product in products:
+    price_usd = ' (${0:.2f})'.format(product["price"])
+    print(" + " + product["name"] + price_usd)
 
 #
 # DEPARTMENTS
@@ -55,8 +55,8 @@ print("THERE ARE", (len(departments)), "DEPARTMENTS:")
 
 departments = sorted(products, key=operator.itemgetter("department"))
 
-for department in departments:
-    print(" + " + (departments["department"]))
+#for department in departments:
+#    print(" + " + (departments["department"]))
 
 #print(departments)
 
