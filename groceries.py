@@ -1,6 +1,10 @@
 import code
 import operator
 
+#
+# PRODUCTS
+#
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -24,27 +28,40 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ]
 
-print("--------------")
-print("THERE ARE", (len(products)), "PRODUCTS:")
+#print("--------------")
+#print("THERE ARE", (len(products)), "PRODUCTS:")
 
 products = sorted(products, key=operator.itemgetter("name"))
 
-for product in products:
-    price_usd = ' (${0:.2f})'.format(product["price"])
-    print(" + " + product["name"] + price_usd)
-
 #for product in products:
 #    price_usd = ' (${0:.2f})'.format(product["price"])
-#    print(" + " + product["name"] + price_usd)    
+#    print(" + " + product["name"] + price_usd)
 
+#
+# DEPARTMENTS
+#
 
+departments = []
+
+for product in products:
+    departments.append(product["department"])
+
+departments = set(departments)
+departments = list(departments)
 
 print(" ")
 print("--------------")
-# print("THERE ARE", (len(department)), "   DEPARTMENTS:")
+print("THERE ARE", (len(departments)), "DEPARTMENTS:")
 
-#for department in products:
-#    print(product["department"]
+departments = sorted(products, key=operator.itemgetter("department"))
+
+for department in departments:
+    print(" + " + (departments["department"]))
+
+#print(departments)
+
+
+# print("THERE ARE", (len(department)), "   DEPARTMENTS:")
 
 # print(products)
 
